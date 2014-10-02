@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baspram's Homepage</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.post').hover(
+			function(){
+				$(this).stop().animate({borderWidth:'15px'}).find('.button').css({"color": "#fff", "background-color": "#000"});
+			},
+			function(){
+				$(this).stop().animate({borderWidth:'0px'}).find('.button').css({"color": "#000", "background-color": "#fff"});
+			}
+		);
+
+	});
+	</script>
+	<script  scr="main.js"></script>
+</head>
+<body>
+	<div id="topLogo"><img src="logo/baspram.png"></div>
+	<div id="topNav">
+		<ul>
+			<li class="title"><a href="">SIMPLE BLOG</a></li>
+			<li class="right"><a href="#openModal"><button class="button">&#43 TAMBAH POST</button></a></li>
+		</ul>
+	</div>
+	<!--<div id="header" class="fullpage">
+	</div>-->
+	<div id="POSTS">
+		<!--<a href="#openModal">Open Modal</a>-->
+			<div id="openModal" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">x</a>
+					<form method="post" action="#">
+                    <label for="Judul">Judul:</label>
+                    <input class="input1" type="text" name="Judul" id="Judul">
+					<br>
+                    <label for="Tanggal">Tanggal:</label>
+                    <input type="text" name="Tanggal" id="Tanggal">
+                    <br>
+                    <label for="Konten">Konten:</label><br>
+                    <textarea name="Konten" rows="10" cols="20" id="Konten"></textarea>
+					<br>
+                    <input type="submit" name="submit" value="Simpan" class="button">
+                </form>
+				</div>
+			</div>
+
+
+		<div class="post">
+			<div class="postleft">
+				<!--<img src="img/purple">-->
+				<a href="post.html"><h1> POST #1 </h1></a>
+				<h3> 13-13-13</h3>
+			</div>
+			<div class="postright">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque odit suscipit quia aperiam perferendis ut neque ad nemo eum voluptates modi, ipsa mollitia! Fuga itaque molestiae ut autem quia.</p>
+				<button class="button">EDIT</button> | <button class="button">DELETE</button> 
+			</div>			
+		</div>
+		<div class="post">
+			<div class="postleft">
+				<a href="post.html"><h1> POST ada deh keberapa nih? maunya berapa?</h1></a>
+				<h3> 13-13-13</h3>
+			</div>
+			<div class="postright">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque odit suscipit quia aperiam perferendis ut neque ad nemo eum voluptates modi, ipsa mollitia! Fuga itaque molestiae ut autem quia.</p>
+				<button class="button">EDIT</button> | <button class="button">DELETE</button> 
+			</div>			
+		</div>
+		<div class="post">
+			<div class="postleft">
+				<h1> POST apapunlah, yang penting jadi</h1>
+				<h3> 13-13-13</h3>
+			</div>
+			<div class="postright">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque odit suscipit quia aperiam perferendis ut neque ad nemo eum voluptates modi, ipsa mollitia! Fuga itaque molestiae ut autem quia.</p>
+				<button class="button">EDIT</button> | <button class="button">DELETE</button> 
+			</div>			
+		</div>
+
+	</div>
+
+	<!--<script type="text/javascript" scr="js/jquery-1.11.1.min.js"></script>-->
+	
+</body>
+</html>
