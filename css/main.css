@@ -236,13 +236,16 @@ div{
 	padding: 2%;
 	font-family: Coolvetica;
 	border-right: 5px solid black;
+	border-bottom: 5px solid black;
 	box-sizing: border-box;
+
 }
 
 #recPost ul{
 	font-family: Coolvetica;
 	color: #000;
 	list-style-type: square;
+	font-size: 80%;
 }
 
 #FORM{
@@ -261,6 +264,10 @@ div{
 #FORM .button{
 	background: #000;
 	color: #fff;
+}
+
+.button:focus {
+	outline:0;
 }
 
 #FORM > h1   {
@@ -284,7 +291,7 @@ div{
 #FORM #POSTS h1{
 	font-family: Coolvetica;
 }
-#openModal label{
+#openModal label, #openModal1 label{
 	font-family: Coolvetica;
 	font-size: 200%;
 }
@@ -294,10 +301,10 @@ div{
 	font-size: 100%;
 }
 
-#openModal input{
+#openModal input, #openModal1 input{
 	display: block;
 	border: 3px black solid;
-	width: 90%;
+	width: 93%;
 	height: 20%;
 	padding: 1%;
 }
@@ -310,8 +317,8 @@ div{
 	padding: 1%;
 }
 
-#openModal textarea{
-	width: 90%;
+#openModal textarea, #openModal1 textarea{
+	width: 93%;
 	border: 3px black solid;
 	padding: 1%;
 }
@@ -322,7 +329,7 @@ div{
 	padding: 1%;
 }
 
-#openModal .button, #FORM .button{
+#openModal .button, #openModal1 .button, #FORM .button, #openModal2 .button{
 	margin-top: 5%;
 	width: 15%;
 	background: #000;
