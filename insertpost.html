@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baspram's Homepage</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script  scr="main.js"></script>
+</head>
+<body>
+	<div id="topLogo"><a href="index.html"><img src="logo/bp.png"></a></div>
+	<div id="topNav">
+		<ul>
+			<li class="title"><a href="index.html">SIMPLE BLOG</a></li>
+			<li class="right"><a href="#"><button class="button">&#43 TAMBAH POST</button></a></li>
+		</ul>
+	</div>
+	<div id="FORM">
+		<div id="EDITPOSTS">
+		<h1>Tambah Post</h1>
+			<form name="pos" method="post" onsubmit="validate()" action="index.html">
+            <div><label for="Judul">Judul</label>
+            <input type="text" name="title" id="title" value="This is my blog">
+            </div>
+			<br>
+			<div>
+            <label for="Tanggal">Tanggal</label>
+            <input type="text" name="date" id="date" value="24-10-1994">
+            </div>
+            <br>
+            <div>
+            <label for="Konten">Konten</label><br>
+            <textarea name="content" id="content" rows="10" cols="20">
+            	Bisa membuat postingan baru
+            </textarea>
+			</div>
+			<br>
+            <input type="submit" name="submit" value="Simpan" class="button">
+        </form>
+		
+
+	</div>
+
+	</div>
+	<script type="text/javascript">
+		function validate(){
+			alert('Post telah ditambahkan');
+			location.href = 'index.html';
+		}
+	</script>
+</body>
+</html>

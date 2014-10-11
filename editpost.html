@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Baspram's Homepage</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script  scr="main.js"></script>
+</head>
+<body>
+	<div id="topLogo"><a href="index.html"><img src="logo/bp.png"></a></div>
+	<div id="topNav">
+		<ul>
+			<li class="title"><a href="index.html">SIMPLE BLOG</a></li>
+			<li class="right"><a href="insertpost.html"><button class="button">&#43 TAMBAH POST</button></a></li>
+		</ul>
+	</div>
+	<div id="FORM">
+		<div id="EDITPOSTS">
+		<h1>Edit Post</h1>
+			<form name="pos" method="post" onsubmit="validate()" action="index.html">
+            <input type="hidden" id="id" name="id" value="1">
+            <label for="Judul">Judul</label>
+            <input type="text" name="title" id="title" value="This is Me">
+			<br>
+            <label for="Tanggal">Tanggal</label>
+            <input type="text" name="date" id="date" value="10-10-2014">
+            <br>
+            <label for="Konten">Konten</label><br>
+            <textarea name="content" id="content" rows="10" cols="20" >	
+            	Bisa edit post yang sudah ada
+            </textarea>
+			<br>
+            <input type="submit" name="submit" value="Simpan" class="button">
+        </form>
+		
+
+	</div>
+
+	</div>
+	<script type="text/javascript">
+	function validate(){
+				alert('Post telah diedit');
+				location.href = 'index.html';
+			}
+		}
+	</script>
+</body>
+</html>

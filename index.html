@@ -5,115 +5,55 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() {
-		$('.post').hover(
-			function(){
-				$(this).stop().animate({borderWidth:'15px'}).find('.button').css({"color": "#fff", "background-color": "#000"});
-			},
-			function(){
-				$(this).stop().animate({borderWidth:'0px'}).find('.button').css({"color": "#000", "background-color": "#fff"});
-			}
-		);
-
-	});
 	</script>
 	<script  scr="main.js"></script>
 </head>
 <body>
-	<div id="topLogo"><img src="logo/baspram.png"></div>
+	<div id="topLogo"><img src="logo/bp.png"></div>
 	<div id="topNav">
 		<ul>
-			<li class="title"><a href="">SIMPLE BLOG</a></li>
-			<li class="right"><a href="#openModal"><button class="button">&#43 TAMBAH POST</button></a></li>
+			<li class="title"><a href="index.html">SIMPLE BLOG</a></li>
+			<li class="right"><a href="insertpost.html"><button class="button">&#43 TAMBAH POST</button></a></li>
 		</ul>
 	</div>
-	<!--<div id="header" class="fullpage">
-	</div>-->
 	<div id="POSTS">
-		<!--<a href="#openModal">Open Modal</a>-->
-			<div id="openModal" class="modalDialog">
-				<div>
-					<a href="#close" title="Close" class="close">x</a>
-					<h1>Tambah Post</h1>
-					<form method="post" action="#">
-                    <label for="Judul">Judul:</label>
-                    <input class="input1" type="text" name="Judul" id="Judul">
-					<br>
-                    <label for="Tanggal">Tanggal:</label>
-                    <input type="text" name="Tanggal" id="Tanggal">
-                    <br>
-                    <label for="Konten">Konten:</label><br>
-                    <textarea name="Konten" rows="10" cols="20" id="Konten"></textarea>
-					<br>
-                    <input type="submit" name="submit" value="Simpan" class="button">
-                </form>
-				</div>
+		<div id="1" class="post">
+			<div class="title">
+			<a href="post.html"><h1 id="postJudul">Know Me More</h1></a>
+				<h5 id="postTanggal">24-10-1994</h5>
 			</div>
-
-			<div id="openModal2" class="modalDialog">
-				<div>
-					<a href="#close" title="Close" class="close">x</a>
-					<h1>Yakin ingin menghapus Post ini?</h1>
-                    <input type="submit" name="submit" value="Hapus" class="button">
-                    <a href="#close"><button class="button">Batal</button></a>
-                </form>
-				</div>
+			<div class="content"> <p id="postKonten">There are something that you should know about me. . .</p>
+				<a href="editpost.html"><button class="button">UBAH</button> </a> | 
+				<button onclick="deletePost()" class="button">HAPUS</button>
 			</div>
-			
-			<div id="openModal1" class="modalDialog">
-				<div>
-					<a href="#close" title="Close" class="close">x</a>
-					<h1>Edit Post</h1>
-					<form method="post" action="#">
-                    <label for="Judul">Judul:</label>
-                    <input class="input1" type="text" name="Judul" id="Judul">
-					<br>
-                    <label for="Tanggal">Tanggal:</label>
-                    <input type="text" name="Tanggal" id="Tanggal">
-                    <br>
-                    <label for="Konten">Konten:</label><br>
-                    <textarea name="Konten" rows="10" cols="20" id="Konten"></textarea>
-					<br>
-                    <input type="submit" name="submit" value="Simpan" class="button">
-                </form>
-				</div>
-			</div>
-
-		<div class="post">
-			<div class="postleft">
-				<!--<img src="img/purple">-->
-				<a href="post.html"><h1> POST #1 </h1></a>
-				<h3> 13-13-13</h3>
-			</div>
-			<div class="postright">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque odit suscipit quia aperiam perferendis ut neque ad nemo eum voluptates modi, ipsa mollitia! Fuga itaque molestiae ut autem quia.</p>
-				<a href="#openModal1"><button class="button">EDIT</button> </a> | <a href="#openModal2"><button class="button">DELETE</button> </a>
-			</div>			
 		</div>
-		<div class="post">
-			<div class="postleft">
-				<a href="post.html"><h1> POST ada deh keberapa nih? maunya berapa?</h1></a>
-				<h3> 13-13-13</h3>
+		<div id="1" class="post">
+			<div class="title">
+			<a href="post.html"><h1 id="postJudul">This is Me</h1></a>
+				<h5 id="postTanggal">24-10-1994</h5>
 			</div>
-			<div class="postright">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque odit suscipit quia aperiam perferendis ut neque ad nemo eum voluptates modi, ipsa mollitia! Fuga itaque molestiae ut autem quia.</p>
-				<a href="#openModal1"><button class="button">EDIT</button> </a> | <a href="#openModal2"><button class="button">DELETE</button> </a>
-			</div>			
-		</div>
-		<div class="post">
-			<div class="postleft">
-				<a href="post.html"><h1> POST ada deh keberapa nih? maunya berapa?</h1></a>
-				<h3> 13-13-13</h3>
+			<div class="content"> <p id="postKonten">Well. . . aku siapa sih?</p>
+				<a href="editpost.html"><button class="button">UBAH</button> </a> | 
+				<button onclick="deletePost()" class="button">HAPUS</button>
 			</div>
-			<div class="postright">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus eaque odit suscipit quia aperiam perferendis ut neque ad nemo eum voluptates modi, ipsa mollitia! Fuga itaque molestiae ut autem quia.</p>
-				<a href="#openModal1"><button class="button">EDIT</button> </a> | <a href="#openModal2"><button class="button">DELETE</button> </a>
-			</div>			
 		</div>
-
+		<div id="1" class="post">
+			<div class="title">
+			<a href="post.html"><h1 id="postJudul">This is my blog</h1></a>
+				<h5 id="postTanggal">24-10-1994</h5>
+			</div>
+			<div class="content"> <p id="postKonten">Click the title to see the entire post</p>
+				<a href="editpost.html"><button class="button">UBAH</button> </a> | 
+				<button onclick="deletePost()" class="button">HAPUS</button>
+			</div>
+		</div>
 	</div>
-
-	<!--<script type="text/javascript" scr="js/jquery-1.11.1.min.js"></script>-->
-	
+	<script type="text/javascript">
+		function deletePost(){
+		    if (confirm("Apakah yakin ingin menghapus post ini?") == true) {
+		        location.href = 'index.html';
+		    }
+		};
+	</script>
 </body>
 </html>

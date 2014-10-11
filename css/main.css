@@ -17,6 +17,11 @@
 	font-family: Strasua;
 	src:url(fonts/Strasua.ttf);
 }
+
+@font-face{
+	font-family: Aaargh;
+	src:url(fonts/Aaargh.ttf);
+}
 html,body{
 	position: relative;
 	height: 100%;
@@ -25,18 +30,37 @@ html,body{
 	padding: 0px;
 	background: #ffffff;
 	color: black;
+	font-size: 100%;
+	letter-spacing: 100%;
 }
 
 div{
 	margin: 0;
 	padding: 0;
 }
+
+a{
+	text-decoration: none;
+}
+
+textarea, input {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 #topLogo img{
 	position: fixed;
-	width: 1.25%;
+	width: 2.5%;
 	height: auto;
 	top: 1%;
 	left: 5%;
+	right: 5%;
+	margin:auto;
 	z-index: 100;
 }
 #topNav {
@@ -48,14 +72,14 @@ div{
 	height: auto;
 	z-index: 99;
 	opacity: 1;
-	border-bottom: 10px black solid;
+	border-bottom: 5px black solid;
 	background: white;
 
 }
 
 #topNav ul{
 	position: relative;
-	padding-left: 10%;
+	padding-left: 5%;
 	width: 100%;
 	height: 100%;
 }
@@ -71,7 +95,7 @@ div{
 }
 #topNav ul .right{
 	float: right;
-	margin-right: 10%;
+	margin-right: 5%;
 	text-decoration: none;
 	color: black;
 	font-family: Coolvetica;
@@ -108,15 +132,24 @@ div{
 	content:"";
 }
 
-#POSTS{
+#POSTS, #EDITPOSTS{
 	position: relative;
 	display: block;
-	padding: 7% 12%;
-	width: 100%;
+	padding: 7% 12% 2%;
+	width: 95%;
 	height: auto;
 	box-sizing: border-box;
 	background: white;
+	font-size: 120%;
 }
+
+#EDITPOSTS {
+	font-family: Coolvetica;
+	width:100%;
+	padding: 2% 20%;
+	margin: auto;
+}
+
 
 .post{
 	position: relative;
@@ -124,19 +157,94 @@ div{
 	width: 100%;
 	height: auto;
 	padding: 2%;
+	padding-top: 0;
 	margin: 3%;
-	border: 0px solid black;
+	border-top: 0px solid black;
+	border-bottom: 0px solid black;
 	box-sizing: border-box;
 	overflow: hidden;
 }
+#FORM .post{
+	border-top: 0px solid black;
+	border-bottom: 0px solid black;
+	-webkit-transition: all 0.3s ease-in-out;
+  	-moz-transition: all 0.3s ease-in-out;
+  	-o-transition: all 0.3s ease-in-out;
+  	transition: all 0.3s ease-in-out;
+}
+
+#FORM .post:hover{
+	border-width: 5px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.post .title{
+	position: relative;
+	display: block;
+	width: 80%;
+	margin: auto;
+	padding: 1%;
+	font-size: 150%;
+	text-align: center;
+	font-family: Chase;
+}
+
+.post .title a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+.post .title h1{
+	margin: 0;
+	font-size: 200%;
+	text-transform: uppercase;
+}
+
+.post .title h5{
+	margin: 0;
+}
+
+.post > .title h1{
+	letter-spacing: 0px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.post:hover > .title h1{
+	letter-spacing: 10px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.post .content{
+	position: relative;
+	display: block;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
 
 .postleft{
 	position: relative;
 	display: block;
-	width: 30%;
+	width: 35%;
 	float: left;
-	padding: 1%;
+	padding:1%;
 	font-family: Coolvetica;
+	font-size: 100%;
+	box-sizing: border-box;
+	word-wrap: break-word;
 }
 
 
@@ -150,9 +258,11 @@ div{
 .postright{
 	position: relative;
 	display: block;
-	width: 50%;
+	width: 60%;
 	float: left;
-	padding: 1%;
+	padding: 4%;
+	word-wrap: break-word;
+	box-sizing: border-box;
 }
 
 
@@ -164,7 +274,22 @@ div{
 	text-decoration:none;
 	font-family: Coolvetica;
 	margin: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
+
+.button:hover{
+	background-color: #fff;
+	color:#000;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+
 #POSTS .button{
 	padding:5px;
 	background-color: #fff;
@@ -173,58 +298,20 @@ div{
 	text-decoration:none;
 	font-family: Coolvetica;
 	margin: 0;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
-.modalDialog {
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+#POSTS .button:hover{
+	background-color: #000;
+	color: #fff;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
-
-.modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
-}
-
-.modalDialog > div {
-	width: 40%;
-	position: relative;
-	margin: 5% auto;
-	padding: 2%;
-	background: #fff;
-	border: 5px solid black;
-}
-
-.close {
-	background: #fff;
-	color: #000;
-	line-height: 25px;
-	position: absolute;
-	right: 1%;
-	text-align: center;
-	top: 2%;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	/*-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;*/
-}
-
-.close:hover { font-size: 200%; }
 
 #recPost{
 	position: fixed;
@@ -242,23 +329,22 @@ div{
 }
 
 #recPost ul{
-	font-family: Coolvetica;
+	font-family: Chase;
 	color: #000;
 	list-style-type: square;
 	font-size: 80%;
 }
 
 #FORM{
-	float: right;
-	width: 70%;
-	margin-top: 5%;
-	margin-right: 3%;
+	width: 95%;
+	margin:auto;
 	padding: 2%;
 	color: black;
+	overflow: hidden;
 }
 
 #FORM label{
-	font-family: Coolvetica;
+	font-family: Chase;
 }
 
 #FORM .button{
@@ -273,53 +359,58 @@ div{
 #FORM > h1   {
 	text-align: center;
 	font-size: 600%;
-	margin-bottom: 0;
-	font-family: Coolvetica;
+	margin: 10% 20% 0;
+	font-family: Chase;
+	letter-spacing: 0px;
+-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
+
+#FORM > h1:hover   {
+	text-align: center;
+	font-size: 600%;
+	margin: 10% 20% 0;
+	font-family: Chase;
+	letter-spacing: 8px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
 #FORM > h3{
 	text-align: center;
 	margin-top: 0;
-	font-family: Coolvetica;
+	font-family: Chase;
+}
+
+#FORM > p{
+	margin: 5% 12% ;
+	text-align: justify;
+	font-size: 100%;
 }
 
 #FORM #POSTS{
-	margin-top: 5%;
-	padding-top: 2%;
-	border-top: 5px solid black;
+	margin-top: 0%;
+	padding-top: 0%;
 }
 
 #FORM #POSTS h1{
 	font-family: Coolvetica;
 }
-#openModal label, #openModal1 label{
-	font-family: Coolvetica;
-	font-size: 200%;
-}
 
 #FORM label{
-	font-family: Coolvetica;
-	font-size: 100%;
-}
-
-#openModal input, #openModal1 input{
-	display: block;
-	border: 3px black solid;
-	width: 93%;
-	height: 20%;
-	padding: 1%;
+	font-family: Chase;
+	font-size: 170%;
 }
 
 #FORM input{
 	display: block;
 	border: 2px black solid;
 	width: 70%;
-	height: 20%;
-	padding: 1%;
-}
-
-#openModal textarea, #openModal1 textarea{
-	width: 93%;
-	border: 3px black solid;
+	height: 15%;
 	padding: 1%;
 }
 
@@ -329,9 +420,120 @@ div{
 	padding: 1%;
 }
 
-#openModal .button, #openModal1 .button, #FORM .button, #openModal2 .button{
-	margin-top: 5%;
+#FORM .button{
+	margin-top: 3%;
 	width: 15%;
 	background: #000;
 	color: #fff;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#FORM .button:hover{
+	background: #fff;
+	color: #000;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#recPost a{
+	text-decoration: none;
+	color: black;
+}
+
+::-webkit-scrollbar {
+	  width: 12px;
+	  border: 3px solid black;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: #fff;
+      border-left: 5px solid black;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: #000; 
+      border-left: 5px solid black;
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #000;
+      border-left: 5px solid black;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: #000;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+#comment_form{
+	width: 40%;
+	display: block;
+	float: left;
+}	
+
+#comment_test{
+	padding-top: 7%;
+	width: 55%;
+	display: block;
+	float: right;
+	font-size: 80%;
+}
+
+#comment_test h4{
+	margin-top: 0;
+}
+
+#comment_test h1{
+	margin-bottom: 0;
+}
+
+#EDITPOSTS {
+	text-align: center;
+	font-family: Chase;
+}
+
+#EDITPOSTS h1{
+	font-size: 220%;
+}
+
+#EDITPOSTS input{
+	margin: auto;
+}
+
+#EDITPOSTS > h1{
+	letter-spacing: 0px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+}
+
+#EDITPOSTS > h1:hover{
+	letter-spacing: 8px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
+}
+
+#EDITPOSTS label{
+	letter-spacing: 0px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#EDITPOSTS  label:hover{
+	letter-spacing: 8px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+
 }
