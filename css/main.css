@@ -7,21 +7,6 @@
 	font-family: Coolvetica;
 	src: url(fonts/Coolvetica.ttf);
 }
-
-@font-face{
-	font-family: Matchbook;
-	src: url(fonts/Matchbook.otf);
-}
-
-@font-face{
-	font-family: Strasua;
-	src:url(fonts/Strasua.ttf);
-}
-
-@font-face{
-	font-family: Aaargh;
-	src:url(fonts/Aaargh.ttf);
-}
 html,body{
 	position: relative;
 	height: 100%;
@@ -34,6 +19,11 @@ html,body{
 }
 
 body{
+	background: url(../img/mainbg.png) no-repeat top left fixed ; 
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
 }
 
 div{
@@ -54,6 +44,10 @@ textarea, input {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
+/***********************************/
+/*********** LOGO + Nav  ***********/
+/***********************************/
 
 #topLogo img{
 	position: fixed;
@@ -110,29 +104,9 @@ textarea, input {
 	font-family: Coolvetica;
 }
 
-.fullpage{
-	content: "";
-	width: 100%;
-	min-height: 100%;
-	max-height: auto;
-	margin: 0px;
-}			
-
-#header{
-	position: relative;
-	/*background: url(img/purple.jpg) no-repeat center center fixed ; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;*/
-}
-
-#header #headBackground{
-	position: relative;
-	min-height: 100%;
-	width: 100%;
-	content:"";
-}
+/***********************************/
+/*********** LOGO + Nav  ***********/
+/***********************************/
 
 #POSTS, #EDITPOSTS{
 	position: relative;
@@ -158,7 +132,7 @@ textarea, input {
 	width: 90%;
 	height: auto;
 	padding: 2%;
-	padding-top: 0;
+	padding-top: 4%;
 	margin: auto;
 	border-top: 0px solid black;
 	border-bottom: 0px solid black;
@@ -328,27 +302,6 @@ textarea, input {
 	transition: all 0.5s ease-in-out;
 }
 
-#recPost{
-	position: fixed;
-	top: 0%;
-	left: 0%;
-	width: 20%;
-	height: auto;
-	margin-top: 5%;
-	padding: 2%;
-	font-family: Coolvetica;
-	border-right: 5px solid black;
-	border-bottom: 5px solid black;
-	box-sizing: border-box;
-
-}
-
-#recPost ul{
-	font-family: Chase;
-	color: #000;
-	list-style-type: square;
-	font-size: 80%;
-}
 
 #FORM{
 	width: 100%;
@@ -356,6 +309,7 @@ textarea, input {
 	padding-top: 2%;
 	color: black;
 	overflow: hidden;
+
 }
 
 #FORM label{
@@ -373,7 +327,7 @@ textarea, input {
 
 #FORM #POST> h1   {
 	text-align: center;
-	font-size: 600%;
+	font-size: 400%;
 	margin: 10% 20% 0;
 	font-family: Chase;
 }
@@ -381,18 +335,21 @@ textarea, input {
 #FORM #POST > h3{
 	text-align: center;
 	margin-top: 0;
+	font-size: 150%;
 	font-family: Chase;
 }
 
 #FORM #POST> p{
-	margin: 5% 12% ;
+	margin: 5%25% ;
 	text-align: justify;
-	font-size: 100%;
+	font-size: 130%;
 }
 
 #FORM #POSTS{
 	margin-top: 0%;
 	padding-top: 0%;
+	overflow: hidden;
+	margin-bottom: 5%;
 }
 
 #FORM #POSTS h1{
@@ -442,29 +399,6 @@ textarea, input {
 	text-decoration: none;
 	color: black;
 }
-
-::-webkit-scrollbar {
-	  width: 12px;
-	  border: 3px solid black;
-} /* this targets the default scrollbar (compulsory) */
-::-webkit-scrollbar-track {
-      background-color: #fff;
-      border-left: 5px solid black;
-} /* the new scrollbar will have a flat appearance with the set background color */
- 
-::-webkit-scrollbar-thumb {
-      background-color: #000; 
-      border-left: 5px solid black;
-} /* this will style the thumb, ignoring the track */
- 
-::-webkit-scrollbar-button {
-      background-color: #000;
-      border-left: 5px solid black;
-} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
- 
-::-webkit-scrollbar-corner {
-      background-color: #000;
-} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
 
 #comment_form{
 	width: 40%;
@@ -535,4 +469,203 @@ textarea, input {
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 
+}
+
+
+::-webkit-scrollbar {
+	  width: 12px;
+	  border: 3px solid black;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: #fff;
+      border-left: 5px solid black;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: #000; 
+      border-left: 5px solid black;
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #000;
+      border-left: 5px solid black;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: #000;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+	#topLogo img{
+		display: none;
+	}
+
+	#topNav ul{
+	height: 10%;
+	}
+	#topNav ul .title{
+	font-size: 100%
+	}
+	#topNav ul .right{
+	margin-right: 10%;
+	}
+
+	#topNav ul .button{
+	font-size: 50%;
+	width: 100%;
+	margin: 0;
+	}
+
+
+	#POSTS, #EDITPOSTS{
+		padding: 15% 12% 2%;
+		font-size: 100%;
+	}
+
+	#EDITPOSTS {
+		padding: 10% 5%;
+	}
+
+
+	.post{
+		width: 100%;
+		padding-top: 5%;
+	}
+	#FORM .post:hover{
+		border-width: 0px;
+	}
+
+	#POST:hover > h1{
+		letter-spacing: 0px;
+	}
+
+
+	.post .title a{
+		text-decoration: none;
+		color: black;
+		
+	}
+
+	.post .title h1{
+		margin: 0;
+		font-size: 200%;
+		text-transform: uppercase;
+	}
+
+	.post:hover > .title h1{
+		letter-spacing: 0px;
+	}
+	.post .content{
+		width: 100%;
+	}
+
+
+	.postleft{
+		width: 35%;
+		float: left;
+		padding:1%;
+	}
+
+	.postright{
+		width: 60%;
+		float: right;
+		padding: 4%;
+	}
+
+	.button:hover{
+		background-color: #000;
+		color:#fff;
+	}
+
+	#POSTS .button:hover{
+		background-color: #fff;
+		color: #000;
+	}
+
+	#FORM{
+		width: 100%;
+		margin:auto;
+		padding-top: 2%;
+		color: black;
+		overflow: hidden;
+
+	}
+
+	#FORM .button{
+		background: #000;
+		color: #fff;
+	}
+
+	#FORM #POST> h1{
+		font-size: 300%;
+		margin: 15% 20% 0;
+	}
+
+	#FORM #POST > h3{
+		font-size: 100%;
+	}
+
+	#FORM #POST> p{
+		margin: 5% 22% ;
+		font-size: 100%;
+	}
+
+	#FORM label{
+		font-size: 150%;
+	}
+
+	#FORM input{
+		width: 90%;
+	}
+
+	#FORM textarea{
+		width: 90%;
+	}
+
+	#FORM .button:hover{
+		background: #000;
+		color: #fff;
+	}
+
+	#comment_form{
+		width: 100%;
+		float: none;
+	}	
+
+	#comment_test{
+		padding-top: 7%;
+		width: 100%;
+		float: none;
+		font-size: 80%;
+	}
+
+	#comment_test h4{
+		margin-top: 0;
+	}
+
+	#comment_test h1{
+		margin-bottom: 0;
+	}
+
+	#EDITPOSTS {
+		text-align: center;
+		font-family: Chase;
+		height: 100%;
+	}
+
+	#EDITPOSTS h1{
+		font-size: 220%;
+	}
+
+	#EDITPOSTS input{
+		margin: auto;
+	}
+
+	#EDITPOSTS > h1:hover{
+		letter-spacing: 0px;
+	}
+	#EDITPOSTS  label:hover{
+		letter-spacing: 0px;
+	}
 }
